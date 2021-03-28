@@ -1,14 +1,15 @@
 class Calculadora
-    def cal(a,b,o)
-        if(o == 'suma')
-            r = a + b
-        elsif (o == 'resta')
-            r = a - b    
-        elsif (o == 'multiplicacion')
-            r = a * b
-        elsif (o == 'division')
-            r = a / b
+    def calcular_operacion(numero1, numero2, operacion)
+        case operacion
+            when "suma"
+                resultado = numero1 + numero2
+            when "resta"
+                resultado = numero1 - numero2
+            when "multiplicacion"
+                resultado = numero1 * numero2
+            when "division"
+                resultado = numero1 / numero2
         end
-        return r
+        return resultado
     end
 end

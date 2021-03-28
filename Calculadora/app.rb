@@ -7,11 +7,11 @@ get '/' do
 end
 
 post '/resultado' do
-    @ela=params[:ElA].to_i
-    @elb=params[:ElB].to_i
-    @op=params[:Op]
-    @cant = Calculadora.new().cal(@ela, @elb, @op)
-    erb :resultado  
+    @elemento_a=params[:Elemento_1].to_i
+    @elemento_b=params[:Elemento_2].to_i
+    @operacion=params[:Operation]
+    @resultado_operacion = Calculadora.new().calcular_operacion(@elemento_a, @elemento_b, @operacion)
+    erb :resultado
 end
 
 post '/volver' do
